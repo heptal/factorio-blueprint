@@ -1,5 +1,5 @@
-export const item_info = [
-    {
+export const itemInfo = {
+    "piercing-rounds-magazine": {
         "stack_size": 200,
         "order": "a[basic-clips]-b[piercing-rounds-magazine]",
         "subgroup": "ammo",
@@ -37,7 +37,7 @@ export const item_info = [
         "icon": "/graphics/icons/piercing-rounds-magazine.png",
         "name": "piercing-rounds-magazine"
     },
-    {
+    "uranium-rounds-magazine": {
         "stack_size": 200,
         "order": "a[basic-clips]-c[uranium-rounds-magazine]",
         "subgroup": "ammo",
@@ -75,7 +75,7 @@ export const item_info = [
         "icon": "/graphics/icons/uranium-rounds-magazine.png",
         "name": "uranium-rounds-magazine"
     },
-    {
+    "flamethrower-ammo": {
         "stack_size": 100,
         "order": "e[flamethrower]",
         "subgroup": "ammo",
@@ -120,7 +120,7 @@ export const item_info = [
         "icon": "/graphics/icons/flamethrower-ammo.png",
         "name": "flamethrower-ammo"
     },
-    {
+    "rocket": {
         "stack_size": 200,
         "order": "d[rocket-launcher]-a[basic]",
         "subgroup": "ammo",
@@ -146,7 +146,7 @@ export const item_info = [
         "icon": "/graphics/icons/rocket.png",
         "name": "rocket"
     },
-    {
+    "explosive-rocket": {
         "stack_size": 200,
         "order": "d[rocket-launcher]-b[explosive]",
         "subgroup": "ammo",
@@ -172,7 +172,7 @@ export const item_info = [
         "icon": "/graphics/icons/explosive-rocket.png",
         "name": "explosive-rocket"
     },
-    {
+    "atomic-bomb": {
         "stack_size": 10,
         "order": "d[rocket-launcher]-c[atomic-bomb]",
         "subgroup": "ammo",
@@ -201,7 +201,7 @@ export const item_info = [
         "icon": "/graphics/icons/atomic-bomb.png",
         "name": "atomic-bomb"
     },
-    {
+    "shotgun-shell": {
         "stack_size": 200,
         "order": "b[shotgun]-a[basic]",
         "subgroup": "ammo",
@@ -243,7 +243,7 @@ export const item_info = [
         "icon": "/graphics/icons/shotgun-shell.png",
         "name": "shotgun-shell"
     },
-    {
+    "piercing-shotgun-shell": {
         "stack_size": 200,
         "order": "b[shotgun]-b[piercing]",
         "subgroup": "ammo",
@@ -285,7 +285,7 @@ export const item_info = [
         "icon": "/graphics/icons/piercing-shotgun-shell.png",
         "name": "piercing-shotgun-shell"
     },
-    {
+    "railgun-dart": {
         "stack_size": 200,
         "order": "c[railgun]",
         "subgroup": "ammo",
@@ -321,7 +321,7 @@ export const item_info = [
         "icon": "/graphics/icons/railgun-ammo.png",
         "name": "railgun-dart"
     },
-    {
+    "cannon-shell": {
         "stack_size": 200,
         "order": "d[cannon-shell]-a[basic]",
         "subgroup": "ammo",
@@ -351,7 +351,7 @@ export const item_info = [
         "icon": "/graphics/icons/cannon-shell.png",
         "name": "cannon-shell"
     },
-    {
+    "explosive-cannon-shell": {
         "stack_size": 200,
         "order": "d[cannon-shell]-c[explosive]",
         "subgroup": "ammo",
@@ -381,7 +381,7 @@ export const item_info = [
         "icon": "/graphics/icons/explosive-cannon-shell.png",
         "name": "explosive-cannon-shell"
     },
-    {
+    "uranium-cannon-shell": {
         "stack_size": 200,
         "order": "d[cannon-shell]-c[uranium]",
         "subgroup": "ammo",
@@ -411,7 +411,7 @@ export const item_info = [
         "icon": "/graphics/icons/uranium-cannon-shell.png",
         "name": "uranium-cannon-shell"
     },
-    {
+    "explosive-uranium-cannon-shell": {
         "stack_size": 200,
         "order": "d[explosive-cannon-shell]-c[uranium]",
         "subgroup": "ammo",
@@ -441,7 +441,7 @@ export const item_info = [
         "icon": "/graphics/icons/explosive-uranium-cannon-shell.png",
         "name": "explosive-uranium-cannon-shell"
     },
-    {
+    "heavy-armor": {
         "durability": 5000,
         "stack_size": 10,
         "order": "b[heavy-armor]",
@@ -475,7 +475,7 @@ export const item_info = [
         "icon": "/graphics/icons/heavy-armor.png",
         "name": "heavy-armor"
     },
-    {
+    "modular-armor": {
         "durability": 10000,
         "inventory_size_bonus": 10,
         "stack_size": 1,
@@ -511,7 +511,7 @@ export const item_info = [
         "icon": "/graphics/icons/modular-armor.png",
         "equipment_grid": "small-equipment-grid"
     },
-    {
+    "power-armor": {
         "durability": 15000,
         "inventory_size_bonus": 20,
         "stack_size": 1,
@@ -547,7 +547,7 @@ export const item_info = [
         "icon": "/graphics/icons/power-armor.png",
         "equipment_grid": "medium-equipment-grid"
     },
-    {
+    "power-armor-mk2": {
         "durability": 20000,
         "inventory_size_bonus": 30,
         "stack_size": 1,
@@ -583,7 +583,7 @@ export const item_info = [
         "icon": "/graphics/icons/power-armor-mk2.png",
         "equipment_grid": "large-equipment-grid"
     },
-    {
+    "grenade": {
         "stack_size": 100,
         "order": "a[grenade]-a[normal]",
         "subgroup": "capsule",
@@ -616,7 +616,7 @@ export const item_info = [
         "icon": "/graphics/icons/grenade.png",
         "name": "grenade"
     },
-    {
+    "cluster-grenade": {
         "stack_size": 100,
         "order": "a[grenade]-b[cluster]",
         "subgroup": "capsule",
@@ -649,7 +649,7 @@ export const item_info = [
         "icon": "/graphics/icons/cluster-grenade.png",
         "name": "cluster-grenade"
     },
-    {
+    "poison-capsule": {
         "stack_size": 100,
         "order": "b[poison-capsule]",
         "subgroup": "capsule",
@@ -682,7 +682,7 @@ export const item_info = [
         "icon": "/graphics/icons/poison-capsule.png",
         "name": "poison-capsule"
     },
-    {
+    "slowdown-capsule": {
         "stack_size": 100,
         "order": "c[slowdown-capsule]",
         "subgroup": "capsule",
@@ -715,7 +715,7 @@ export const item_info = [
         "icon": "/graphics/icons/slowdown-capsule.png",
         "name": "slowdown-capsule"
     },
-    {
+    "defender-capsule": {
         "stack_size": 100,
         "order": "d[defender-capsule]",
         "subgroup": "capsule",
@@ -748,7 +748,7 @@ export const item_info = [
         "icon": "/graphics/icons/defender-capsule.png",
         "name": "defender-capsule"
     },
-    {
+    "distractor-capsule": {
         "stack_size": 100,
         "order": "e[defender-capsule]",
         "subgroup": "capsule",
@@ -781,7 +781,7 @@ export const item_info = [
         "icon": "/graphics/icons/distractor-capsule.png",
         "name": "distractor-capsule"
     },
-    {
+    "destroyer-capsule": {
         "stack_size": 100,
         "order": "f[destroyer-capsule]",
         "subgroup": "capsule",
@@ -814,7 +814,7 @@ export const item_info = [
         "icon": "/graphics/icons/destroyer-capsule.png",
         "name": "destroyer-capsule"
     },
-    {
+    "discharge-defense-remote": {
         "stack_size": 1,
         "order": "z",
         "subgroup": "capsule",
@@ -829,7 +829,7 @@ export const item_info = [
         "icon": "/graphics/equipment/discharge-defense-equipment-ability.png",
         "name": "discharge-defense-remote"
     },
-    {
+    "firearm-magazine": {
         "stack_size": 200,
         "order": "a[basic-clips]-a[firearm-magazine]",
         "subgroup": "ammo",
@@ -873,7 +873,7 @@ export const item_info = [
         "icon": "/graphics/icons/firearm-magazine.png",
         "name": "firearm-magazine"
     },
-    {
+    "light-armor": {
         "durability": 1000,
         "stack_size": 10,
         "order": "a[light-armor]",
@@ -907,7 +907,7 @@ export const item_info = [
         "icon": "/graphics/icons/light-armor.png",
         "name": "light-armor"
     },
-    {
+    "pistol": {
         "name": "pistol",
         "stack_size": 5,
         "order": "a[basic-clips]-a[pistol]",
@@ -939,7 +939,7 @@ export const item_info = [
             }
         }
     },
-    {
+    "submachine-gun": {
         "name": "submachine-gun",
         "stack_size": 5,
         "order": "a[basic-clips]-b[submachine-gun]",
@@ -971,7 +971,7 @@ export const item_info = [
             }
         }
     },
-    {
+    "stone-brick": {
         "stack_size": 100,
         "order": "a[stone-brick]",
         "place_as_tile": {
@@ -989,7 +989,7 @@ export const item_info = [
         "icon": "/graphics/icons/stone-brick.png",
         "name": "stone-brick"
     },
-    {
+    "raw-wood": {
         "name": "raw-wood",
         "stack_size": 100,
         "order": "a[raw-wood]",
@@ -1002,7 +1002,7 @@ export const item_info = [
         "fuel_category": "chemical",
         "icon": "/graphics/icons/raw-wood.png"
     },
-    {
+    "coal": {
         "name": "coal",
         "stack_size": 50,
         "order": "b[coal]",
@@ -1016,7 +1016,7 @@ export const item_info = [
         "fuel_category": "chemical",
         "icon": "/graphics/icons/coal.png"
     },
-    {
+    "stone": {
         "stack_size": 50,
         "order": "d[stone]",
         "subgroup": "raw-resource",
@@ -1027,7 +1027,7 @@ export const item_info = [
         "name": "stone",
         "icon": "/graphics/icons/stone.png"
     },
-    {
+    "iron-ore": {
         "stack_size": 50,
         "order": "e[iron-ore]",
         "subgroup": "raw-resource",
@@ -1038,7 +1038,7 @@ export const item_info = [
         "name": "iron-ore",
         "icon": "/graphics/icons/iron-ore.png"
     },
-    {
+    "copper-ore": {
         "stack_size": 50,
         "order": "f[copper-ore]",
         "subgroup": "raw-resource",
@@ -1049,7 +1049,7 @@ export const item_info = [
         "name": "copper-ore",
         "icon": "/graphics/icons/copper-ore.png"
     },
-    {
+    "wood": {
         "name": "wood",
         "stack_size": 50,
         "order": "a[wood]",
@@ -1062,7 +1062,7 @@ export const item_info = [
         "fuel_category": "chemical",
         "icon": "/graphics/icons/wood.png"
     },
-    {
+    "iron-plate": {
         "stack_size": 100,
         "order": "b[iron-plate]",
         "subgroup": "raw-material",
@@ -1073,7 +1073,7 @@ export const item_info = [
         "name": "iron-plate",
         "icon": "/graphics/icons/iron-plate.png"
     },
-    {
+    "copper-plate": {
         "stack_size": 100,
         "order": "c[copper-plate]",
         "subgroup": "raw-material",
@@ -1084,7 +1084,7 @@ export const item_info = [
         "name": "copper-plate",
         "icon": "/graphics/icons/copper-plate.png"
     },
-    {
+    "copper-cable": {
         "stack_size": 200,
         "order": "a[copper-cable]",
         "subgroup": "intermediate-product",
@@ -1095,7 +1095,7 @@ export const item_info = [
         "name": "copper-cable",
         "icon": "/graphics/icons/copper-cable.png"
     },
-    {
+    "iron-stick": {
         "stack_size": 100,
         "order": "b[iron-stick]",
         "subgroup": "intermediate-product",
@@ -1106,7 +1106,7 @@ export const item_info = [
         "name": "iron-stick",
         "icon": "/graphics/icons/iron-stick.png"
     },
-    {
+    "iron-gear-wheel": {
         "stack_size": 100,
         "order": "c[iron-gear-wheel]",
         "subgroup": "intermediate-product",
@@ -1117,7 +1117,7 @@ export const item_info = [
         "name": "iron-gear-wheel",
         "icon": "/graphics/icons/iron-gear-wheel.png"
     },
-    {
+    "electronic-circuit": {
         "stack_size": 200,
         "order": "e[electronic-circuit]",
         "subgroup": "intermediate-product",
@@ -1128,7 +1128,7 @@ export const item_info = [
         "name": "electronic-circuit",
         "icon": "/graphics/icons/electronic-circuit.png"
     },
-    {
+    "wooden-chest": {
         "name": "wooden-chest",
         "place_result": "wooden-chest",
         "order": "a[items]-a[wooden-chest]",
@@ -1142,7 +1142,7 @@ export const item_info = [
         "fuel_category": "chemical",
         "icon": "/graphics/icons/wooden-chest.png"
     },
-    {
+    "stone-furnace": {
         "place_result": "stone-furnace",
         "order": "a[stone-furnace]",
         "subgroup": "smelting-machine",
@@ -1154,7 +1154,7 @@ export const item_info = [
         "icon": "/graphics/icons/stone-furnace.png",
         "name": "stone-furnace"
     },
-    {
+    "burner-mining-drill": {
         "place_result": "burner-mining-drill",
         "order": "a[items]-a[burner-mining-drill]",
         "subgroup": "extraction-machine",
@@ -1166,7 +1166,7 @@ export const item_info = [
         "icon": "/graphics/icons/burner-mining-drill.png",
         "name": "burner-mining-drill"
     },
-    {
+    "electric-mining-drill": {
         "place_result": "electric-mining-drill",
         "order": "a[items]-b[electric-mining-drill]",
         "subgroup": "extraction-machine",
@@ -1178,7 +1178,7 @@ export const item_info = [
         "icon": "/graphics/icons/electric-mining-drill.png",
         "name": "electric-mining-drill"
     },
-    {
+    "transport-belt": {
         "place_result": "transport-belt",
         "order": "a[transport-belt]-a[transport-belt]",
         "subgroup": "belt",
@@ -1190,7 +1190,7 @@ export const item_info = [
         "icon": "/graphics/icons/transport-belt.png",
         "name": "transport-belt"
     },
-    {
+    "burner-inserter": {
         "place_result": "burner-inserter",
         "order": "a[burner-inserter]",
         "subgroup": "inserter",
@@ -1202,7 +1202,7 @@ export const item_info = [
         "icon": "/graphics/icons/burner-inserter.png",
         "name": "burner-inserter"
     },
-    {
+    "inserter": {
         "place_result": "inserter",
         "order": "b[inserter]",
         "subgroup": "inserter",
@@ -1214,7 +1214,7 @@ export const item_info = [
         "icon": "/graphics/icons/inserter.png",
         "name": "inserter"
     },
-    {
+    "offshore-pump": {
         "place_result": "offshore-pump",
         "order": "b[fluids]-a[offshore-pump]",
         "subgroup": "extraction-machine",
@@ -1226,7 +1226,7 @@ export const item_info = [
         "icon": "/graphics/icons/offshore-pump.png",
         "name": "offshore-pump"
     },
-    {
+    "pipe": {
         "place_result": "pipe",
         "order": "a[pipe]-a[pipe]",
         "subgroup": "energy-pipe-distribution",
@@ -1238,7 +1238,7 @@ export const item_info = [
         "icon": "/graphics/icons/pipe.png",
         "name": "pipe"
     },
-    {
+    "boiler": {
         "place_result": "boiler",
         "order": "b[steam-power]-a[boiler]",
         "subgroup": "energy",
@@ -1250,7 +1250,7 @@ export const item_info = [
         "icon": "/graphics/icons/boiler.png",
         "name": "boiler"
     },
-    {
+    "steam-engine": {
         "place_result": "steam-engine",
         "order": "b[steam-power]-b[steam-engine]",
         "subgroup": "energy",
@@ -1262,7 +1262,7 @@ export const item_info = [
         "icon": "/graphics/icons/steam-engine.png",
         "name": "steam-engine"
     },
-    {
+    "small-electric-pole": {
         "name": "small-electric-pole",
         "place_result": "small-electric-pole",
         "order": "a[energy]-a[small-electric-pole]",
@@ -1276,7 +1276,7 @@ export const item_info = [
         "fuel_category": "chemical",
         "icon": "/graphics/icons/small-electric-pole.png"
     },
-    {
+    "radar": {
         "place_result": "radar",
         "order": "d[radar]-a[radar]",
         "subgroup": "defensive-structure",
@@ -1288,7 +1288,7 @@ export const item_info = [
         "icon": "/graphics/icons/radar.png",
         "name": "radar"
     },
-    {
+    "computer": {
         "stack_size": 1,
         "order": "g[computer]",
         "subgroup": "defensive-structure",
@@ -1300,7 +1300,7 @@ export const item_info = [
         "name": "computer",
         "icon": "/graphics/icons/computer.png"
     },
-    {
+    "small-plane": {
         "stack_size": 1,
         "order": "b[personal-transport]-c[small-plane]",
         "subgroup": "transport",
@@ -1312,7 +1312,7 @@ export const item_info = [
         "name": "small-plane",
         "icon": "/graphics/icons/small-plane.png"
     },
-    {
+    "small-lamp": {
         "place_result": "small-lamp",
         "order": "a[light]-a[small-lamp]",
         "subgroup": "circuit-network",
@@ -1324,7 +1324,7 @@ export const item_info = [
         "icon": "/graphics/icons/small-lamp.png",
         "name": "small-lamp"
     },
-    {
+    "pipe-to-ground": {
         "place_result": "pipe-to-ground",
         "order": "a[pipe]-b[pipe-to-ground]",
         "subgroup": "energy-pipe-distribution",
@@ -1336,7 +1336,7 @@ export const item_info = [
         "icon": "/graphics/icons/pipe-to-ground.png",
         "name": "pipe-to-ground"
     },
-    {
+    "assembling-machine-1": {
         "place_result": "assembling-machine-1",
         "order": "a[assembling-machine-1]",
         "subgroup": "production-machine",
@@ -1348,7 +1348,7 @@ export const item_info = [
         "icon": "/graphics/icons/assembling-machine-1.png",
         "name": "assembling-machine-1"
     },
-    {
+    "red-wire": {
         "stack_size": 200,
         "order": "b[wires]-a[red-wire]",
         "subgroup": "circuit-network",
@@ -1359,7 +1359,7 @@ export const item_info = [
         "name": "red-wire",
         "icon": "/graphics/icons/red-wire.png"
     },
-    {
+    "green-wire": {
         "stack_size": 200,
         "order": "b[wires]-b[green-wire]",
         "subgroup": "circuit-network",
@@ -1370,7 +1370,7 @@ export const item_info = [
         "name": "green-wire",
         "icon": "/graphics/icons/green-wire.png"
     },
-    {
+    "raw-fish": {
         "stack_size": 100,
         "order": "f-e-a",
         "subgroup": "raw-resource",
@@ -1407,7 +1407,7 @@ export const item_info = [
         "icon": "/graphics/icons/fish.png",
         "name": "raw-fish"
     },
-    {
+    "repair-pack": {
         "durability": 300,
         "speed": 2,
         "stack_size": 100,
@@ -1420,7 +1420,7 @@ export const item_info = [
         "icon": "/graphics/icons/repair-pack.png",
         "name": "repair-pack"
     },
-    {
+    "stone-wall": {
         "place_result": "stone-wall",
         "order": "a[stone-wall]-a[stone-wall]",
         "subgroup": "defensive-structure",
@@ -1432,7 +1432,7 @@ export const item_info = [
         "icon": "/graphics/icons/stone-wall.png",
         "name": "stone-wall"
     },
-    {
+    "iron-axe": {
         "durability": 4000,
         "action": {
             "action_delivery": {
@@ -1458,7 +1458,7 @@ export const item_info = [
         "icon": "/graphics/icons/iron-axe.png",
         "name": "iron-axe"
     },
-    {
+    "gun-turret": {
         "place_result": "gun-turret",
         "order": "b[turret]-a[gun-turret]",
         "subgroup": "defensive-structure",
@@ -1470,7 +1470,7 @@ export const item_info = [
         "icon": "/graphics/icons/gun-turret.png",
         "name": "gun-turret"
     },
-    {
+    "solar-panel-equipment": {
         "stack_size": 20,
         "order": "a[energy-source]-a[solar-panel]",
         "subgroup": "equipment",
@@ -1482,7 +1482,7 @@ export const item_info = [
         "icon": "/graphics/icons/solar-panel-equipment.png",
         "name": "solar-panel-equipment"
     },
-    {
+    "fusion-reactor-equipment": {
         "stack_size": 20,
         "order": "a[energy-source]-b[fusion-reactor]",
         "subgroup": "equipment",
@@ -1494,7 +1494,7 @@ export const item_info = [
         "icon": "/graphics/icons/fusion-reactor-equipment.png",
         "name": "fusion-reactor-equipment"
     },
-    {
+    "energy-shield-equipment": {
         "stack_size": 50,
         "order": "b[shield]-a[energy-shield-equipment]",
         "default_request_amount": 10,
@@ -1507,7 +1507,7 @@ export const item_info = [
         "icon": "/graphics/icons/energy-shield-equipment.png",
         "name": "energy-shield-equipment"
     },
-    {
+    "energy-shield-mk2-equipment": {
         "stack_size": 50,
         "order": "b[shield]-b[energy-shield-equipment-mk2]",
         "default_request_amount": 10,
@@ -1520,7 +1520,7 @@ export const item_info = [
         "icon": "/graphics/icons/energy-shield-mk2-equipment.png",
         "name": "energy-shield-mk2-equipment"
     },
-    {
+    "battery-equipment": {
         "stack_size": 50,
         "order": "c[battery]-a[battery-equipment]",
         "default_request_amount": 10,
@@ -1533,7 +1533,7 @@ export const item_info = [
         "icon": "/graphics/icons/battery-equipment.png",
         "name": "battery-equipment"
     },
-    {
+    "battery-mk2-equipment": {
         "stack_size": 50,
         "order": "c[battery]-b[battery-equipment-mk2]",
         "default_request_amount": 10,
@@ -1546,7 +1546,7 @@ export const item_info = [
         "icon": "/graphics/icons/battery-mk2-equipment.png",
         "name": "battery-mk2-equipment"
     },
-    {
+    "personal-laser-defense-equipment": {
         "stack_size": 20,
         "order": "d[active-defense]-a[personal-laser-defense-equipment]",
         "subgroup": "equipment",
@@ -1558,7 +1558,7 @@ export const item_info = [
         "icon": "/graphics/icons/personal-laser-defense-equipment.png",
         "name": "personal-laser-defense-equipment"
     },
-    {
+    "discharge-defense-equipment": {
         "stack_size": 20,
         "order": "d[active-defense]-b[discharge-defense-equipment]",
         "subgroup": "equipment",
@@ -1570,7 +1570,7 @@ export const item_info = [
         "icon": "/graphics/icons/discharge-defense-equipment.png",
         "name": "discharge-defense-equipment"
     },
-    {
+    "exoskeleton-equipment": {
         "stack_size": 10,
         "order": "e[exoskeleton]-a[exoskeleton-equipment]",
         "subgroup": "equipment",
@@ -1582,7 +1582,7 @@ export const item_info = [
         "icon": "/graphics/icons/exoskeleton-equipment.png",
         "name": "exoskeleton-equipment"
     },
-    {
+    "personal-roboport-equipment": {
         "stack_size": 5,
         "order": "e[robotics]-a[personal-roboport-equipment]",
         "subgroup": "equipment",
@@ -1594,7 +1594,7 @@ export const item_info = [
         "icon": "/graphics/icons/personal-roboport-equipment.png",
         "name": "personal-roboport-equipment"
     },
-    {
+    "personal-roboport-mk2-equipment": {
         "stack_size": 5,
         "order": "e[robotics]-b[personal-roboport-mk2-equipment]",
         "subgroup": "equipment",
@@ -1606,7 +1606,7 @@ export const item_info = [
         "icon": "/graphics/icons/personal-roboport-mk2-equipment.png",
         "name": "personal-roboport-mk2-equipment"
     },
-    {
+    "night-vision-equipment": {
         "stack_size": 20,
         "order": "f[night-vision]-a[night-vision-equipment]",
         "subgroup": "equipment",
@@ -1618,7 +1618,7 @@ export const item_info = [
         "icon": "/graphics/icons/night-vision-equipment.png",
         "name": "night-vision-equipment"
     },
-    {
+    "belt-immunity-equipment": {
         "stack_size": 1,
         "order": "a[belt-immunity]-a[belt-immunity]",
         "subgroup": "equipment",
@@ -1631,7 +1631,7 @@ export const item_info = [
         "icon": "/graphics/icons/belt-immunity-equipment.png",
         "name": "belt-immunity-equipment"
     },
-    {
+    "flamethrower": {
         "name": "flamethrower",
         "stack_size": 5,
         "order": "e[flamethrower]",
@@ -1676,7 +1676,7 @@ export const item_info = [
             "min_range": 3
         }
     },
-    {
+    "vehicle-machine-gun": {
         "name": "vehicle-machine-gun",
         "stack_size": 1,
         "order": "a[basic-clips]-b[vehicle-machine-gun]",
@@ -1709,7 +1709,7 @@ export const item_info = [
             }
         }
     },
-    {
+    "tank-machine-gun": {
         "name": "tank-machine-gun",
         "stack_size": 1,
         "order": "a[basic-clips]-b[tank-machine-gun]",
@@ -1747,7 +1747,7 @@ export const item_info = [
             }
         }
     },
-    {
+    "tank-flamethrower": {
         "name": "tank-flamethrower",
         "stack_size": 1,
         "order": "b[flamethrower]-b[tank-flamethrower]",
@@ -1792,7 +1792,7 @@ export const item_info = [
             "min_range": 3
         }
     },
-    {
+    "land-mine": {
         "icon": "/graphics/icons/land-mine.png",
         "name": "land-mine",
         "place_result": "land-mine",
@@ -1806,7 +1806,7 @@ export const item_info = [
             "goes-to-quickbar"
         ]
     },
-    {
+    "rocket-launcher": {
         "name": "rocket-launcher",
         "stack_size": 5,
         "order": "d[rocket-launcher]",
@@ -1835,7 +1835,7 @@ export const item_info = [
             ]
         }
     },
-    {
+    "shotgun": {
         "name": "shotgun",
         "stack_size": 5,
         "order": "b[shotgun]-a[basic]",
@@ -1860,7 +1860,7 @@ export const item_info = [
             ]
         }
     },
-    {
+    "combat-shotgun": {
         "name": "combat-shotgun",
         "stack_size": 5,
         "order": "b[shotgun]-a[combat]",
@@ -1886,7 +1886,7 @@ export const item_info = [
             ]
         }
     },
-    {
+    "railgun": {
         "name": "railgun",
         "stack_size": 5,
         "order": "c[railgun]",
@@ -1912,7 +1912,7 @@ export const item_info = [
             ]
         }
     },
-    {
+    "tank-cannon": {
         "name": "tank-cannon",
         "stack_size": 5,
         "order": "z[tank]-a[cannon]",
@@ -1942,7 +1942,7 @@ export const item_info = [
             ]
         }
     },
-    {
+    "iron-chest": {
         "place_result": "iron-chest",
         "order": "a[items]-b[iron-chest]",
         "subgroup": "storage",
@@ -1954,7 +1954,7 @@ export const item_info = [
         "icon": "/graphics/icons/iron-chest.png",
         "name": "iron-chest"
     },
-    {
+    "steel-chest": {
         "place_result": "steel-chest",
         "order": "a[items]-c[steel-chest]",
         "subgroup": "storage",
@@ -1966,7 +1966,7 @@ export const item_info = [
         "icon": "/graphics/icons/steel-chest.png",
         "name": "steel-chest"
     },
-    {
+    "fast-transport-belt": {
         "place_result": "fast-transport-belt",
         "order": "a[transport-belt]-b[fast-transport-belt]",
         "subgroup": "belt",
@@ -1978,7 +1978,7 @@ export const item_info = [
         "icon": "/graphics/icons/fast-transport-belt.png",
         "name": "fast-transport-belt"
     },
-    {
+    "express-transport-belt": {
         "place_result": "express-transport-belt",
         "order": "a[transport-belt]-c[express-transport-belt]",
         "subgroup": "belt",
@@ -1990,7 +1990,7 @@ export const item_info = [
         "icon": "/graphics/icons/express-transport-belt.png",
         "name": "express-transport-belt"
     },
-    {
+    "long-handed-inserter": {
         "place_result": "long-handed-inserter",
         "order": "c[long-handed-inserter]",
         "subgroup": "inserter",
@@ -2002,7 +2002,7 @@ export const item_info = [
         "icon": "/graphics/icons/long-handed-inserter.png",
         "name": "long-handed-inserter"
     },
-    {
+    "fast-inserter": {
         "place_result": "fast-inserter",
         "order": "d[fast-inserter]",
         "subgroup": "inserter",
@@ -2014,7 +2014,7 @@ export const item_info = [
         "icon": "/graphics/icons/fast-inserter.png",
         "name": "fast-inserter"
     },
-    {
+    "filter-inserter": {
         "place_result": "filter-inserter",
         "order": "e[filter-inserter]",
         "subgroup": "inserter",
@@ -2026,7 +2026,7 @@ export const item_info = [
         "icon": "/graphics/icons/filter-inserter.png",
         "name": "filter-inserter"
     },
-    {
+    "stack-inserter": {
         "place_result": "stack-inserter",
         "order": "f[stack-inserter]",
         "subgroup": "inserter",
@@ -2038,7 +2038,7 @@ export const item_info = [
         "icon": "/graphics/icons/stack-inserter.png",
         "name": "stack-inserter"
     },
-    {
+    "stack-filter-inserter": {
         "place_result": "stack-filter-inserter",
         "order": "g[stack-filter-inserter]",
         "subgroup": "inserter",
@@ -2050,7 +2050,7 @@ export const item_info = [
         "icon": "/graphics/icons/stack-filter-inserter.png",
         "name": "stack-filter-inserter"
     },
-    {
+    "assembling-machine-2": {
         "place_result": "assembling-machine-2",
         "order": "b[assembling-machine-2]",
         "subgroup": "production-machine",
@@ -2062,7 +2062,7 @@ export const item_info = [
         "icon": "/graphics/icons/assembling-machine-2.png",
         "name": "assembling-machine-2"
     },
-    {
+    "assembling-machine-3": {
         "place_result": "assembling-machine-3",
         "order": "c[assembling-machine-3]",
         "subgroup": "production-machine",
@@ -2074,7 +2074,7 @@ export const item_info = [
         "icon": "/graphics/icons/assembling-machine-3.png",
         "name": "assembling-machine-3"
     },
-    {
+    "solar-panel": {
         "place_result": "solar-panel",
         "order": "d[solar-panel]-a[solar-panel]",
         "subgroup": "energy",
@@ -2086,7 +2086,7 @@ export const item_info = [
         "icon": "/graphics/icons/solar-panel.png",
         "name": "solar-panel"
     },
-    {
+    "locomotive": {
         "place_result": "locomotive",
         "order": "a[train-system]-f[diesel-locomotive]",
         "subgroup": "transport",
@@ -2098,7 +2098,7 @@ export const item_info = [
         "icon": "/graphics/icons/diesel-locomotive.png",
         "name": "locomotive"
     },
-    {
+    "cargo-wagon": {
         "place_result": "cargo-wagon",
         "order": "a[train-system]-g[cargo-wagon]",
         "subgroup": "transport",
@@ -2110,7 +2110,7 @@ export const item_info = [
         "icon": "/graphics/icons/cargo-wagon.png",
         "name": "cargo-wagon"
     },
-    {
+    "fluid-wagon": {
         "place_result": "fluid-wagon",
         "order": "a[train-system]-h[fluid-wagon]",
         "subgroup": "transport",
@@ -2122,7 +2122,7 @@ export const item_info = [
         "icon": "/graphics/icons/fluid-wagon.png",
         "name": "fluid-wagon"
     },
-    {
+    "rail": {
         "name": "rail",
         "place_result": "straight-rail",
         "order": "a[train-system]-a[rail]",
@@ -2136,7 +2136,7 @@ export const item_info = [
         ],
         "icon": "/graphics/icons/rail.png"
     },
-    {
+    "player-port": {
         "place_result": "player-port",
         "order": "z[not-used]",
         "subgroup": "defensive-structure",
@@ -2149,7 +2149,7 @@ export const item_info = [
         "icon": "/graphics/icons/player-port.png",
         "name": "player-port"
     },
-    {
+    "gate": {
         "place_result": "gate",
         "order": "a[wall]-b[gate]",
         "subgroup": "defensive-structure",
@@ -2161,7 +2161,7 @@ export const item_info = [
         "icon": "/graphics/icons/gate.png",
         "name": "gate"
     },
-    {
+    "car": {
         "place_result": "car",
         "order": "b[personal-transport]-a[car]",
         "subgroup": "transport",
@@ -2173,7 +2173,7 @@ export const item_info = [
         "icon": "/graphics/icons/car.png",
         "name": "car"
     },
-    {
+    "tank": {
         "place_result": "tank",
         "order": "b[personal-transport]-b[tank]",
         "subgroup": "transport",
@@ -2185,7 +2185,7 @@ export const item_info = [
         "icon": "/graphics/icons/tank.png",
         "name": "tank"
     },
-    {
+    "science-pack-1": {
         "durability": 1,
         "durability_description_key": "description.science-pack-remaining-amount",
         "stack_size": 200,
@@ -2198,7 +2198,7 @@ export const item_info = [
         "icon": "/graphics/icons/science-pack-1.png",
         "name": "science-pack-1"
     },
-    {
+    "science-pack-2": {
         "durability": 1,
         "durability_description_key": "description.science-pack-remaining-amount",
         "stack_size": 200,
@@ -2211,7 +2211,7 @@ export const item_info = [
         "icon": "/graphics/icons/science-pack-2.png",
         "name": "science-pack-2"
     },
-    {
+    "science-pack-3": {
         "durability": 1,
         "durability_description_key": "description.science-pack-remaining-amount",
         "stack_size": 200,
@@ -2224,7 +2224,7 @@ export const item_info = [
         "icon": "/graphics/icons/science-pack-3.png",
         "name": "science-pack-3"
     },
-    {
+    "military-science-pack": {
         "durability": 1,
         "durability_description_key": "description.science-pack-remaining-amount",
         "stack_size": 200,
@@ -2237,7 +2237,7 @@ export const item_info = [
         "icon": "/graphics/icons/military-science-pack.png",
         "name": "military-science-pack"
     },
-    {
+    "production-science-pack": {
         "durability": 1,
         "durability_description_key": "description.science-pack-remaining-amount",
         "stack_size": 200,
@@ -2250,7 +2250,7 @@ export const item_info = [
         "icon": "/graphics/icons/production-science-pack.png",
         "name": "production-science-pack"
     },
-    {
+    "high-tech-science-pack": {
         "durability": 1,
         "durability_description_key": "description.science-pack-remaining-amount",
         "stack_size": 200,
@@ -2263,7 +2263,7 @@ export const item_info = [
         "icon": "/graphics/icons/high-tech-science-pack.png",
         "name": "high-tech-science-pack"
     },
-    {
+    "space-science-pack": {
         "durability": 1,
         "durability_description_key": "description.science-pack-remaining-amount",
         "stack_size": 2000,
@@ -2276,7 +2276,7 @@ export const item_info = [
         "icon": "/graphics/icons/space-science-pack.png",
         "name": "space-science-pack"
     },
-    {
+    "lab": {
         "place_result": "lab",
         "order": "g[lab]",
         "subgroup": "production-machine",
@@ -2288,7 +2288,7 @@ export const item_info = [
         "icon": "/graphics/icons/lab.png",
         "name": "lab"
     },
-    {
+    "train-stop": {
         "place_result": "train-stop",
         "order": "a[train-system]-c[train-stop]",
         "subgroup": "transport",
@@ -2300,7 +2300,7 @@ export const item_info = [
         "icon": "/graphics/icons/train-stop.png",
         "name": "train-stop"
     },
-    {
+    "rail-signal": {
         "place_result": "rail-signal",
         "order": "a[train-system]-d[rail-signal]",
         "subgroup": "transport",
@@ -2312,7 +2312,7 @@ export const item_info = [
         "icon": "/graphics/icons/rail-signal.png",
         "name": "rail-signal"
     },
-    {
+    "rail-chain-signal": {
         "place_result": "rail-chain-signal",
         "order": "a[train-system]-e[rail-signal-chain]",
         "subgroup": "transport",
@@ -2324,7 +2324,7 @@ export const item_info = [
         "icon": "/graphics/icons/rail-chain-signal.png",
         "name": "rail-chain-signal"
     },
-    {
+    "steel-plate": {
         "stack_size": 100,
         "order": "d[steel-plate]",
         "subgroup": "raw-material",
@@ -2335,7 +2335,7 @@ export const item_info = [
         "name": "steel-plate",
         "icon": "/graphics/icons/steel-plate.png"
     },
-    {
+    "underground-belt": {
         "place_result": "underground-belt",
         "order": "b[underground-belt]-a[underground-belt]",
         "subgroup": "belt",
@@ -2347,7 +2347,7 @@ export const item_info = [
         "icon": "/graphics/icons/underground-belt.png",
         "name": "underground-belt"
     },
-    {
+    "fast-underground-belt": {
         "place_result": "fast-underground-belt",
         "order": "b[underground-belt]-b[fast-underground-belt]",
         "subgroup": "belt",
@@ -2359,7 +2359,7 @@ export const item_info = [
         "icon": "/graphics/icons/fast-underground-belt.png",
         "name": "fast-underground-belt"
     },
-    {
+    "express-underground-belt": {
         "place_result": "express-underground-belt",
         "order": "b[underground-belt]-c[express-underground-belt]",
         "subgroup": "belt",
@@ -2371,7 +2371,7 @@ export const item_info = [
         "icon": "/graphics/icons/express-underground-belt.png",
         "name": "express-underground-belt"
     },
-    {
+    "splitter": {
         "place_result": "splitter",
         "order": "c[splitter]-a[splitter]",
         "subgroup": "belt",
@@ -2383,7 +2383,7 @@ export const item_info = [
         "icon": "/graphics/icons/splitter.png",
         "name": "splitter"
     },
-    {
+    "fast-splitter": {
         "place_result": "fast-splitter",
         "order": "c[splitter]-b[fast-splitter]",
         "subgroup": "belt",
@@ -2395,7 +2395,7 @@ export const item_info = [
         "icon": "/graphics/icons/fast-splitter.png",
         "name": "fast-splitter"
     },
-    {
+    "express-splitter": {
         "place_result": "express-splitter",
         "order": "c[splitter]-c[express-splitter]",
         "subgroup": "belt",
@@ -2407,7 +2407,7 @@ export const item_info = [
         "icon": "/graphics/icons/express-splitter.png",
         "name": "express-splitter"
     },
-    {
+    "loader": {
         "place_result": "loader",
         "order": "d[loader]-a[basic-loader]",
         "subgroup": "belt",
@@ -2420,7 +2420,7 @@ export const item_info = [
         "icon": "/graphics/icons/loader.png",
         "name": "loader"
     },
-    {
+    "fast-loader": {
         "place_result": "fast-loader",
         "order": "d[loader]-b[fast-loader]",
         "subgroup": "belt",
@@ -2433,7 +2433,7 @@ export const item_info = [
         "icon": "/graphics/icons/fast-loader.png",
         "name": "fast-loader"
     },
-    {
+    "express-loader": {
         "place_result": "express-loader",
         "order": "d[loader]-c[express-loader]",
         "subgroup": "belt",
@@ -2446,7 +2446,7 @@ export const item_info = [
         "icon": "/graphics/icons/express-loader.png",
         "name": "express-loader"
     },
-    {
+    "advanced-circuit": {
         "stack_size": 200,
         "order": "f[advanced-circuit]",
         "subgroup": "intermediate-product",
@@ -2457,7 +2457,7 @@ export const item_info = [
         "name": "advanced-circuit",
         "icon": "/graphics/icons/advanced-circuit.png"
     },
-    {
+    "processing-unit": {
         "stack_size": 100,
         "order": "g[processing-unit]",
         "subgroup": "intermediate-product",
@@ -2468,7 +2468,7 @@ export const item_info = [
         "name": "processing-unit",
         "icon": "/graphics/icons/processing-unit.png"
     },
-    {
+    "logistic-robot": {
         "place_result": "logistic-robot",
         "order": "a[robot]-a[logistic-robot]",
         "subgroup": "logistic-network",
@@ -2480,7 +2480,7 @@ export const item_info = [
         "icon": "/graphics/icons/logistic-robot.png",
         "name": "logistic-robot"
     },
-    {
+    "construction-robot": {
         "place_result": "construction-robot",
         "order": "a[robot]-b[construction-robot]",
         "subgroup": "logistic-network",
@@ -2492,7 +2492,7 @@ export const item_info = [
         "icon": "/graphics/icons/construction-robot.png",
         "name": "construction-robot"
     },
-    {
+    "logistic-chest-passive-provider": {
         "place_result": "logistic-chest-passive-provider",
         "order": "b[storage]-c[logistic-chest-passive-provider]",
         "subgroup": "logistic-network",
@@ -2504,7 +2504,7 @@ export const item_info = [
         "icon": "/graphics/icons/logistic-chest-passive-provider.png",
         "name": "logistic-chest-passive-provider"
     },
-    {
+    "logistic-chest-active-provider": {
         "place_result": "logistic-chest-active-provider",
         "order": "b[storage]-c[logistic-chest-active-provider]",
         "subgroup": "logistic-network",
@@ -2516,7 +2516,7 @@ export const item_info = [
         "icon": "/graphics/icons/logistic-chest-active-provider.png",
         "name": "logistic-chest-active-provider"
     },
-    {
+    "logistic-chest-storage": {
         "place_result": "logistic-chest-storage",
         "order": "b[storage]-c[logistic-chest-storage]",
         "subgroup": "logistic-network",
@@ -2528,7 +2528,7 @@ export const item_info = [
         "icon": "/graphics/icons/logistic-chest-storage.png",
         "name": "logistic-chest-storage"
     },
-    {
+    "logistic-chest-requester": {
         "place_result": "logistic-chest-requester",
         "order": "b[storage]-c[logistic-chest-requester]",
         "subgroup": "logistic-network",
@@ -2540,7 +2540,7 @@ export const item_info = [
         "icon": "/graphics/icons/logistic-chest-requester.png",
         "name": "logistic-chest-requester"
     },
-    {
+    "rocket-silo": {
         "place_result": "rocket-silo",
         "order": "e[rocket-silo]",
         "subgroup": "defensive-structure",
@@ -2552,7 +2552,7 @@ export const item_info = [
         "icon": "/graphics/icons/rocket-silo.png",
         "name": "rocket-silo"
     },
-    {
+    "roboport": {
         "place_result": "roboport",
         "order": "c[signal]-a[roboport]",
         "subgroup": "logistic-network",
@@ -2564,7 +2564,7 @@ export const item_info = [
         "icon": "/graphics/icons/roboport.png",
         "name": "roboport"
     },
-    {
+    "coin": {
         "stack_size": 100000,
         "order": "y",
         "subgroup": "science-pack",
@@ -2576,7 +2576,7 @@ export const item_info = [
         "name": "coin",
         "icon": "/graphics/icons/coin.png"
     },
-    {
+    "big-electric-pole": {
         "place_result": "big-electric-pole",
         "order": "a[energy]-c[big-electric-pole]",
         "subgroup": "energy-pipe-distribution",
@@ -2588,7 +2588,7 @@ export const item_info = [
         "icon": "/graphics/icons/big-electric-pole.png",
         "name": "big-electric-pole"
     },
-    {
+    "medium-electric-pole": {
         "place_result": "medium-electric-pole",
         "order": "a[energy]-b[medium-electric-pole]",
         "subgroup": "energy-pipe-distribution",
@@ -2600,7 +2600,7 @@ export const item_info = [
         "icon": "/graphics/icons/medium-electric-pole.png",
         "name": "medium-electric-pole"
     },
-    {
+    "substation": {
         "place_result": "substation",
         "order": "a[energy]-d[substation]",
         "subgroup": "energy-pipe-distribution",
@@ -2612,7 +2612,7 @@ export const item_info = [
         "icon": "/graphics/icons/substation.png",
         "name": "substation"
     },
-    {
+    "accumulator": {
         "place_result": "accumulator",
         "order": "e[accumulator]-a[accumulator]",
         "subgroup": "energy",
@@ -2624,7 +2624,7 @@ export const item_info = [
         "icon": "/graphics/icons/accumulator.png",
         "name": "accumulator"
     },
-    {
+    "steel-furnace": {
         "place_result": "steel-furnace",
         "order": "b[steel-furnace]",
         "subgroup": "smelting-machine",
@@ -2636,7 +2636,7 @@ export const item_info = [
         "icon": "/graphics/icons/steel-furnace.png",
         "name": "steel-furnace"
     },
-    {
+    "electric-furnace": {
         "place_result": "electric-furnace",
         "order": "c[electric-furnace]",
         "subgroup": "smelting-machine",
@@ -2648,7 +2648,7 @@ export const item_info = [
         "icon": "/graphics/icons/electric-furnace.png",
         "name": "electric-furnace"
     },
-    {
+    "beacon": {
         "place_result": "beacon",
         "order": "a[beacon]",
         "subgroup": "module",
@@ -2660,7 +2660,7 @@ export const item_info = [
         "icon": "/graphics/icons/beacon.png",
         "name": "beacon"
     },
-    {
+    "storage-tank": {
         "place_result": "storage-tank",
         "order": "b[fluid]-a[storage-tank]",
         "subgroup": "storage",
@@ -2672,7 +2672,7 @@ export const item_info = [
         "icon": "/graphics/icons/storage-tank.png",
         "name": "storage-tank"
     },
-    {
+    "pump": {
         "place_result": "pump",
         "order": "b[pipe]-c[pump]",
         "subgroup": "energy-pipe-distribution",
@@ -2684,7 +2684,7 @@ export const item_info = [
         "icon": "/graphics/icons/pump.png",
         "name": "pump"
     },
-    {
+    "blueprint": {
         "flags": [
             "goes-to-quickbar"
         ],
@@ -2716,7 +2716,7 @@ export const item_info = [
             "blueprint"
         ]
     },
-    {
+    "deconstruction-planner": {
         "flags": [
             "goes-to-quickbar"
         ],
@@ -2747,7 +2747,7 @@ export const item_info = [
             "deconstruct"
         ]
     },
-    {
+    "blueprint-book": {
         "stack_size": 1,
         "order": "c[automated-construction]-c[blueprint-book]",
         "subgroup": "tool",
@@ -2759,7 +2759,7 @@ export const item_info = [
         "icon": "/graphics/icons/blueprint-book.png",
         "name": "blueprint-book"
     },
-    {
+    "pumpjack": {
         "place_result": "pumpjack",
         "order": "b[fluids]-b[pumpjack]",
         "subgroup": "extraction-machine",
@@ -2771,7 +2771,7 @@ export const item_info = [
         "icon": "/graphics/icons/pumpjack.png",
         "name": "pumpjack"
     },
-    {
+    "oil-refinery": {
         "place_result": "oil-refinery",
         "order": "d[refinery]",
         "subgroup": "production-machine",
@@ -2783,7 +2783,7 @@ export const item_info = [
         "icon": "/graphics/icons/oil-refinery.png",
         "name": "oil-refinery"
     },
-    {
+    "chemical-plant": {
         "place_result": "chemical-plant",
         "order": "e[chemical-plant]",
         "subgroup": "production-machine",
@@ -2795,7 +2795,7 @@ export const item_info = [
         "icon": "/graphics/icons/chemical-plant.png",
         "name": "chemical-plant"
     },
-    {
+    "sulfur": {
         "stack_size": 50,
         "order": "f[sulfur]",
         "subgroup": "raw-material",
@@ -2806,7 +2806,7 @@ export const item_info = [
         "name": "sulfur",
         "icon": "/graphics/icons/sulfur.png"
     },
-    {
+    "empty-barrel": {
         "stack_size": 10,
         "order": "d[empty-barrel]",
         "subgroup": "intermediate-product",
@@ -2817,7 +2817,7 @@ export const item_info = [
         "name": "empty-barrel",
         "icon": "/graphics/icons/fluid/barreling/empty-barrel.png"
     },
-    {
+    "solid-fuel": {
         "name": "solid-fuel",
         "stack_size": 50,
         "order": "c[solid-fuel]",
@@ -2832,7 +2832,7 @@ export const item_info = [
         "fuel_category": "chemical",
         "icon": "/graphics/icons/solid-fuel.png"
     },
-    {
+    "plastic-bar": {
         "stack_size": 100,
         "order": "g[plastic-bar]",
         "subgroup": "raw-material",
@@ -2843,7 +2843,7 @@ export const item_info = [
         "name": "plastic-bar",
         "icon": "/graphics/icons/plastic-bar.png"
     },
-    {
+    "engine-unit": {
         "stack_size": 50,
         "order": "h[engine-unit]",
         "subgroup": "intermediate-product",
@@ -2854,7 +2854,7 @@ export const item_info = [
         "name": "engine-unit",
         "icon": "/graphics/icons/engine-unit.png"
     },
-    {
+    "electric-engine-unit": {
         "stack_size": 50,
         "order": "i[electric-engine-unit]",
         "subgroup": "intermediate-product",
@@ -2865,7 +2865,7 @@ export const item_info = [
         "name": "electric-engine-unit",
         "icon": "/graphics/icons/electric-engine-unit.png"
     },
-    {
+    "explosives": {
         "stack_size": 50,
         "order": "j[explosives]",
         "subgroup": "intermediate-product",
@@ -2876,7 +2876,7 @@ export const item_info = [
         "name": "explosives",
         "icon": "/graphics/icons/explosives.png"
     },
-    {
+    "battery": {
         "stack_size": 200,
         "order": "j[battery]",
         "subgroup": "intermediate-product",
@@ -2887,7 +2887,7 @@ export const item_info = [
         "name": "battery",
         "icon": "/graphics/icons/battery.png"
     },
-    {
+    "flying-robot-frame": {
         "stack_size": 50,
         "order": "l[flying-robot-frame]",
         "subgroup": "intermediate-product",
@@ -2898,7 +2898,7 @@ export const item_info = [
         "name": "flying-robot-frame",
         "icon": "/graphics/icons/flying-robot-frame.png"
     },
-    {
+    "arithmetic-combinator": {
         "stack_size": 50,
         "order": "c[combinators]-a[arithmetic-combinator]",
         "subgroup": "circuit-network",
@@ -2910,7 +2910,7 @@ export const item_info = [
         "icon": "/graphics/icons/arithmetic-combinator.png",
         "name": "arithmetic-combinator"
     },
-    {
+    "decider-combinator": {
         "stack_size": 50,
         "order": "c[combinators]-b[decider-combinator]",
         "subgroup": "circuit-network",
@@ -2922,7 +2922,7 @@ export const item_info = [
         "icon": "/graphics/icons/decider-combinator.png",
         "name": "decider-combinator"
     },
-    {
+    "constant-combinator": {
         "stack_size": 50,
         "order": "c[combinators]-c[constant-combinator]",
         "subgroup": "circuit-network",
@@ -2934,7 +2934,7 @@ export const item_info = [
         "icon": "/graphics/icons/constant-combinator.png",
         "name": "constant-combinator"
     },
-    {
+    "power-switch": {
         "stack_size": 50,
         "order": "d[other]-a[power-switch]",
         "subgroup": "circuit-network",
@@ -2946,7 +2946,7 @@ export const item_info = [
         "icon": "/graphics/icons/power-switch.png",
         "name": "power-switch"
     },
-    {
+    "programmable-speaker": {
         "place_result": "programmable-speaker",
         "order": "d[other]-b[programmable-speaker]",
         "subgroup": "circuit-network",
@@ -2958,7 +2958,7 @@ export const item_info = [
         "icon": "/graphics/icons/programmable-speaker.png",
         "name": "programmable-speaker"
     },
-    {
+    "low-density-structure": {
         "stack_size": 10,
         "order": "m[rocket-structure]",
         "subgroup": "intermediate-product",
@@ -2969,7 +2969,7 @@ export const item_info = [
         "name": "low-density-structure",
         "icon": "/graphics/icons/rocket-structure.png"
     },
-    {
+    "rocket-fuel": {
         "name": "rocket-fuel",
         "stack_size": 10,
         "order": "n[rocket-fuel]",
@@ -2984,7 +2984,7 @@ export const item_info = [
         "fuel_category": "chemical",
         "icon": "/graphics/icons/rocket-fuel.png"
     },
-    {
+    "rocket-control-unit": {
         "stack_size": 10,
         "order": "o[rocket-control-unit]",
         "subgroup": "intermediate-product",
@@ -2995,7 +2995,7 @@ export const item_info = [
         "name": "rocket-control-unit",
         "icon": "/graphics/icons/rocket-control-unit.png"
     },
-    {
+    "rocket-part": {
         "stack_size": 5,
         "order": "p[rocket-part]",
         "subgroup": "intermediate-product",
@@ -3007,7 +3007,7 @@ export const item_info = [
         "name": "rocket-part",
         "icon": "/graphics/icons/rocket-part.png"
     },
-    {
+    "satellite": {
         "stack_size": 1,
         "order": "q[satellite]",
         "subgroup": "intermediate-product",
@@ -3018,7 +3018,7 @@ export const item_info = [
         "name": "satellite",
         "icon": "/graphics/icons/satellite.png"
     },
-    {
+    "concrete": {
         "stack_size": 100,
         "order": "b[concrete]-a[plain]",
         "place_as_tile": {
@@ -3036,7 +3036,7 @@ export const item_info = [
         "icon": "/graphics/icons/concrete.png",
         "name": "concrete"
     },
-    {
+    "hazard-concrete": {
         "stack_size": 100,
         "order": "b[concrete]-b[hazard]",
         "place_as_tile": {
@@ -3054,7 +3054,7 @@ export const item_info = [
         "icon": "/graphics/icons/hazard-concrete.png",
         "name": "hazard-concrete"
     },
-    {
+    "landfill": {
         "stack_size": 100,
         "order": "c[landfill]-a[dirt]",
         "place_as_tile": {
@@ -3072,7 +3072,7 @@ export const item_info = [
         "icon": "/graphics/icons/landfill.png",
         "name": "landfill"
     },
-    {
+    "dummy-selection-tool": {
         "flags": [
             "goes-to-quickbar",
             "hidden"
@@ -3106,7 +3106,7 @@ export const item_info = [
             "blueprint"
         ]
     },
-    {
+    "electric-energy-interface": {
         "place_result": "electric-energy-interface",
         "order": "e[electric-energy-interface]-b[electric-energy-interface]",
         "subgroup": "energy",
@@ -3129,7 +3129,7 @@ export const item_info = [
             }
         ]
     },
-    {
+    "uranium-ore": {
         "stack_size": 50,
         "order": "g[uranium-ore]",
         "subgroup": "raw-resource",
@@ -3140,7 +3140,7 @@ export const item_info = [
         "name": "uranium-ore",
         "icon": "/graphics/icons/uranium-ore.png"
     },
-    {
+    "nuclear-reactor": {
         "place_result": "nuclear-reactor",
         "order": "f[nuclear-energy]-a[reactor]",
         "subgroup": "energy",
@@ -3152,7 +3152,7 @@ export const item_info = [
         "icon": "/graphics/icons/nuclear-reactor.png",
         "name": "nuclear-reactor"
     },
-    {
+    "uranium-235": {
         "stack_size": 100,
         "order": "g[uranium-235]",
         "subgroup": "intermediate-product",
@@ -3163,7 +3163,7 @@ export const item_info = [
         "name": "uranium-235",
         "icon": "/graphics/icons/uranium-235.png"
     },
-    {
+    "uranium-238": {
         "stack_size": 100,
         "order": "g[uranium-238]",
         "subgroup": "intermediate-product",
@@ -3174,7 +3174,7 @@ export const item_info = [
         "name": "uranium-238",
         "icon": "/graphics/icons/uranium-238.png"
     },
-    {
+    "centrifuge": {
         "place_result": "centrifuge",
         "order": "g[centrifuge]",
         "subgroup": "production-machine",
@@ -3186,7 +3186,7 @@ export const item_info = [
         "icon": "/graphics/icons/centrifuge.png",
         "name": "centrifuge"
     },
-    {
+    "uranium-fuel-cell": {
         "icon": "/graphics/icons/uranium-fuel-cell.png",
         "name": "uranium-fuel-cell",
         "stack_size": 50,
@@ -3200,7 +3200,7 @@ export const item_info = [
         "fuel_category": "nuclear",
         "burnt_result": "used-up-uranium-fuel-cell"
     },
-    {
+    "used-up-uranium-fuel-cell": {
         "stack_size": 50,
         "order": "i[used-up-uranium-fuel-cell]",
         "subgroup": "intermediate-product",
@@ -3211,7 +3211,7 @@ export const item_info = [
         "name": "used-up-uranium-fuel-cell",
         "icon": "/graphics/icons/used-up-uranium-fuel-cell.png"
     },
-    {
+    "heat-exchanger": {
         "place_result": "heat-exchanger",
         "order": "f[nuclear-energy]-b[heat-exchanger]",
         "subgroup": "energy",
@@ -3223,7 +3223,7 @@ export const item_info = [
         "icon": "/graphics/icons/heat-boiler.png",
         "name": "heat-exchanger"
     },
-    {
+    "steam-turbine": {
         "place_result": "steam-turbine",
         "order": "b[steam-power]-c[steam-turbine]",
         "subgroup": "energy",
@@ -3235,7 +3235,7 @@ export const item_info = [
         "icon": "/graphics/icons/steam-turbine.png",
         "name": "steam-turbine"
     },
-    {
+    "heat-pipe": {
         "place_result": "heat-pipe",
         "order": "f[nuclear-energy]-c[heat-pipe]",
         "subgroup": "energy",
@@ -3247,7 +3247,7 @@ export const item_info = [
         "icon": "/graphics/icons/heat-pipe.png",
         "name": "heat-pipe"
     },
-    {
+    "simple-entity-with-force": {
         "place_result": "simple-entity-with-force",
         "order": "s[simple-entity-with-force]-f[simple-entity-with-force]",
         "subgroup": "storage",
@@ -3260,7 +3260,7 @@ export const item_info = [
         "icon": "/graphics/icons/steel-chest.png",
         "name": "simple-entity-with-force"
     },
-    {
+    "simple-entity-with-owner": {
         "place_result": "simple-entity-with-owner",
         "order": "s[simple-entity-with-owner]-o[simple-entity-with-owner]",
         "subgroup": "storage",
@@ -3273,7 +3273,7 @@ export const item_info = [
         "icon": "/graphics/icons/wooden-chest.png",
         "name": "simple-entity-with-owner"
     },
-    {
+    "item-with-tags": {
         "stack_size": 1,
         "order": "s[item-with-tags]-o[item-with-tags]",
         "subgroup": "storage",
@@ -3285,7 +3285,7 @@ export const item_info = [
         "name": "item-with-tags",
         "icon": "/graphics/icons/wooden-chest.png"
     },
-    {
+    "steel-axe": {
         "durability": 5000,
         "action": {
             "action_delivery": {
@@ -3311,7 +3311,7 @@ export const item_info = [
         "icon": "/graphics/icons/steel-axe.png",
         "name": "steel-axe"
     },
-    {
+    "speed-module": {
         "effect": {
             "consumption": {
                 "bonus": 0.5
@@ -3333,7 +3333,7 @@ export const item_info = [
         "icon": "/graphics/icons/speed-module.png",
         "name": "speed-module"
     },
-    {
+    "speed-module-2": {
         "effect": {
             "consumption": {
                 "bonus": 0.6
@@ -3355,7 +3355,7 @@ export const item_info = [
         "icon": "/graphics/icons/speed-module-2.png",
         "name": "speed-module-2"
     },
-    {
+    "speed-module-3": {
         "effect": {
             "consumption": {
                 "bonus": 0.7
@@ -3377,7 +3377,7 @@ export const item_info = [
         "icon": "/graphics/icons/speed-module-3.png",
         "name": "speed-module-3"
     },
-    {
+    "effectivity-module": {
         "effect": {
             "consumption": {
                 "bonus": -0.3
@@ -3396,7 +3396,7 @@ export const item_info = [
         "icon": "/graphics/icons/effectivity-module.png",
         "name": "effectivity-module"
     },
-    {
+    "effectivity-module-2": {
         "effect": {
             "consumption": {
                 "bonus": -0.4
@@ -3415,7 +3415,7 @@ export const item_info = [
         "icon": "/graphics/icons/effectivity-module-2.png",
         "name": "effectivity-module-2"
     },
-    {
+    "effectivity-module-3": {
         "effect": {
             "consumption": {
                 "bonus": -0.5
@@ -3434,7 +3434,7 @@ export const item_info = [
         "icon": "/graphics/icons/effectivity-module-3.png",
         "name": "effectivity-module-3"
     },
-    {
+    "laser-turret": {
         "place_result": "laser-turret",
         "order": "b[turret]-b[laser-turret]",
         "subgroup": "defensive-structure",
@@ -3446,7 +3446,7 @@ export const item_info = [
         "icon": "/graphics/icons/laser-turret.png",
         "name": "laser-turret"
     },
-    {
+    "flamethrower-turret": {
         "place_result": "flamethrower-turret",
         "order": "b[turret]-c[flamethrower-turret]",
         "subgroup": "defensive-structure",
@@ -3457,5 +3457,92 @@ export const item_info = [
         "type": "item",
         "icon": "/graphics/icons/flamethrower-turret.png",
         "name": "flamethrower-turret"
-    },{"name":"productivity-module","category":"productivity","limitation_message_key":"production-module-usable-only-on-intermediates","tier":1,"stack_size":50,"type":"module","order":"c[productivity]-a[productivity-module-1]","icon":"\/graphics\/icons\/productivity-module.png","default_request_amount":10,"effect":{"consumption":{"bonus":0.4},"speed":{"bonus":-0.15},"productivity":{"bonus":0.04},"pollution":{"bonus":0.05}},"subgroup":"module","flags":["goes-to-main-inventory"]},{"name":"productivity-module-2","category":"productivity","limitation_message_key":"production-module-usable-only-on-intermediates","tier":2,"stack_size":50,"type":"module","order":"c[productivity]-b[productivity-module-2]","icon":"\/graphics\/icons\/productivity-module-2.png","default_request_amount":10,"effect":{"consumption":{"bonus":0.6},"speed":{"bonus":-0.15},"productivity":{"bonus":0.06},"pollution":{"bonus":0.075}},"subgroup":"module","flags":["goes-to-main-inventory"]},{"name":"productivity-module-3","category":"productivity","limitation_message_key":"production-module-usable-only-on-intermediates","tier":3,"stack_size":50,"type":"module","order":"c[productivity]-c[productivity-module-3]","icon":"\/graphics\/icons\/productivity-module-3.png","default_request_amount":10,"effect":{"consumption":{"bonus":0.8},"speed":{"bonus":-0.15},"productivity":{"bonus":0.1},"pollution":{"bonus":0.1}},"subgroup":"module","flags":["goes-to-main-inventory"]}
-]
+    },
+    "productivity-module": {
+        "name": "productivity-module",
+        "category": "productivity",
+        "limitation_message_key": "production-module-usable-only-on-intermediates",
+        "tier": 1,
+        "stack_size": 50,
+        "type": "module",
+        "order": "c[productivity]-a[productivity-module-1]",
+        "icon": "/graphics/icons/productivity-module.png",
+        "default_request_amount": 10,
+        "effect": {
+            "consumption": {
+                "bonus": 0.4
+            },
+            "speed": {
+                "bonus": -0.15
+            },
+            "productivity": {
+                "bonus": 0.04
+            },
+            "pollution": {
+                "bonus": 0.05
+            }
+        },
+        "subgroup": "module",
+        "flags": [
+            "goes-to-main-inventory"
+        ]
+    },
+    "productivity-module-2": {
+        "name": "productivity-module-2",
+        "category": "productivity",
+        "limitation_message_key": "production-module-usable-only-on-intermediates",
+        "tier": 2,
+        "stack_size": 50,
+        "type": "module",
+        "order": "c[productivity]-b[productivity-module-2]",
+        "icon": "/graphics/icons/productivity-module-2.png",
+        "default_request_amount": 10,
+        "effect": {
+            "consumption": {
+                "bonus": 0.6
+            },
+            "speed": {
+                "bonus": -0.15
+            },
+            "productivity": {
+                "bonus": 0.06
+            },
+            "pollution": {
+                "bonus": 0.075
+            }
+        },
+        "subgroup": "module",
+        "flags": [
+            "goes-to-main-inventory"
+        ]
+    },
+    "productivity-module-3": {
+        "name": "productivity-module-3",
+        "category": "productivity",
+        "limitation_message_key": "production-module-usable-only-on-intermediates",
+        "tier": 3,
+        "stack_size": 50,
+        "type": "module",
+        "order": "c[productivity]-c[productivity-module-3]",
+        "icon": "/graphics/icons/productivity-module-3.png",
+        "default_request_amount": 10,
+        "effect": {
+            "consumption": {
+                "bonus": 0.8
+            },
+            "speed": {
+                "bonus": -0.15
+            },
+            "productivity": {
+                "bonus": 0.1
+            },
+            "pollution": {
+                "bonus": 0.1
+            }
+        },
+        "subgroup": "module",
+        "flags": [
+            "goes-to-main-inventory"
+        ]
+    },"crude-oil":{"default_temperature":25,"flow_color":{"g":0.5,"r":0.5,"b":0.5},"name":"crude-oil","flow_to_energy_ratio":0.59,"order":"a[fluid]-b[crude-oil]","pressure_to_speed_ratio":0.4,"base_color":{"g":0,"r":0,"b":0},"heat_capacity":"0.1KJ","type":"fluid","icon":"/graphics/icons/fluid/crude-oil.png","max_temperature":100},"heavy-oil":{"default_temperature":25,"flow_color":{"g":0.6,"r":0.85,"b":0.3},"name":"heavy-oil","flow_to_energy_ratio":0.59,"order":"a[fluid]-c[heavy-oil]","pressure_to_speed_ratio":0.4,"base_color":{"g":0.04,"r":0.5,"b":0},"heat_capacity":"0.1KJ","type":"fluid","icon":"/graphics/icons/fluid/heavy-oil.png","max_temperature":100},"light-oil":{"default_temperature":25,"flow_color":{"g":0.73,"r":1,"b":0.07},"name":"light-oil","flow_to_energy_ratio":0.59,"order":"a[fluid]-d[light-oil]","pressure_to_speed_ratio":0.4,"base_color":{"g":0.33,"r":0.57,"b":0},"heat_capacity":"0.1KJ","type":"fluid","icon":"/graphics/icons/fluid/light-oil.png","max_temperature":100},"petroleum-gas":{"default_temperature":25,"flow_color":{"g":0.8,"r":0.8,"b":0.8},"name":"petroleum-gas","flow_to_energy_ratio":0.59,"order":"a[fluid]-e[petroleum-gas]","pressure_to_speed_ratio":0.4,"base_color":{"g":0.1,"r":0.3,"b":0.3},"heat_capacity":"0.1KJ","type":"fluid","icon":"/graphics/icons/fluid/petroleum-gas.png","max_temperature":100},"lubricant":{"default_temperature":25,"flow_color":{"g":0.75,"r":0.43,"b":0.31},"name":"lubricant","flow_to_energy_ratio":0.59,"order":"e[lubricant]","pressure_to_speed_ratio":0.4,"base_color":{"g":0.32,"r":0.15,"b":0.03},"heat_capacity":"0.1KJ","type":"fluid","icon":"/graphics/icons/fluid/lubricant.png","max_temperature":100},"sulfuric-acid":{"default_temperature":25,"flow_color":{"g":1,"r":0.7,"b":0.1},"name":"sulfuric-acid","flow_to_energy_ratio":0.59,"order":"a[fluid]-f[sulfuric-acid]","pressure_to_speed_ratio":0.4,"base_color":{"g":0.65,"r":0.75,"b":0.1},"heat_capacity":"0.1KJ","type":"fluid","icon":"/graphics/icons/fluid/sulfuric-acid.png","max_temperature":100},"water":{"default_temperature":15,"flow_color":{"g":0.7,"r":0.7,"b":0.7},"name":"water","flow_to_energy_ratio":0.59,"order":"a[fluid]-a[water]","pressure_to_speed_ratio":0.4,"base_color":{"g":0.34,"r":0,"b":0.6},"heat_capacity":"0.2KJ","type":"fluid","icon":"/graphics/icons/fluid/water.png","max_temperature":100},"steam":{"pressure_to_speed_ratio":0.4,"flow_color":{"g":1,"r":1,"b":1},"flow_to_energy_ratio":0.59,"type":"fluid","max_temperature":1000,"order":"a[fluid]-b[steam]","icon":"/graphics/icons/fluid/steam.png","base_color":{"g":0.5,"r":0.5,"b":0.5},"auto_barrel":false,"heat_capacity":"0.2KJ","gas_temperature":15,"default_temperature":15,"name":"steam"}
+}

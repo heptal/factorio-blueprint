@@ -1,32 +1,24 @@
 import { combineReducers } from 'redux'
+import undoable, { includeAction } from 'redux-undo'
 import * as types from '../actions/types'
 import {decode, encode} from '../../utils/blueprint'
 
 import {upgrades} from '../../constants/entities'
-import { entity_info } from '../../constants/entities';
-
-// const setInitialState = (state = Map()) => {
-//   const initialState = {
-//     blueprintString
-//   };
-
-//   return state.merge(initialState);
-// }
+import { entityInfo, rotatable } from '../../constants/entities';
 
 const initialState = {
   blueprint: {
-    "blueprint": {
-      "icons": [],
-      "entities": [],
-      "tiles": [],
-      "item": "blueprint",
-      "version": 0
-    }
+      icons: [],
+      entities: [],
+      tiles: [],
+      item: "blueprint",
+      version: 0
   },
-  mode: "select",
+  mode: "inspect",
   selected: {},
-  cellSize: 40,
-  newEntityName: "transport-belt"
+  cellSize: 30,
+  newEntityName: "transport-belt",
+  newEntityDirection: 0
 }
 
 const mode = (state = initialState.mode, action) => {
@@ -48,6 +40,18 @@ const newEntityName = (state = initialState.newEntityName, action) => {
   }
 }
 
+const newEntityDirection = (state = initialState.newEntityDirection, action) => {
+  if (action.type==types.MODIFY_ENTITY && action.mode == "rotate") {
+    let entity = action.entity
+    if (!rotatable.includes(entityInfo[entity.name].type)) {
+      return state;
+    }
+    return (entity.direction + 2) % 8;
+  } else {
+    return state
+  }
+}
+
 const cellSize = (state = initialState.cellSize, action) => {
   switch (action.type) {
     case types.INCREASE_SIZE:
@@ -59,12 +63,10 @@ const cellSize = (state = initialState.cellSize, action) => {
   }
 }
 
-
-
 const selected = (state = initialState.selected, action) => {
   switch (action.type) {
     case types.MODIFY_ENTITY:
-      if (action.mode == "select") {
+      if (action.mode == "inspect") {
         return action.entity
       }
       else {
@@ -75,89 +77,100 @@ const selected = (state = initialState.selected, action) => {
   }
 }
 
+const rotateEntity = (e) => {
+  const entity = {...e}
+  const info = entityInfo[entity.name]
+  entity.direction = !!entity.direction ? (entity.direction + 2) % 8 : 2;
+  if (info.width != info.height && info.width % 2 == 0 || info.height % 2 == 0) {
+    if (entity.direction==2 || entity.direction==6) {
+      entity.position.x -= 0.5
+      entity.position.y += 0.5
+    } else if (entity.direction==0 || entity.direction==4) {
+      entity.position.x += 0.5
+      entity.position.y -= 0.5
+    }
+  }
+  return entity
+}
+
 const blueprint = (state = initialState.blueprint, action) => {
   switch (action.type) {
     case types.PROCESS_BLUEPRINT_STRING:
       if (action.blueprintString[0] != '0') {
         return state;
       }
-      const blueprint = JSON.parse(decode(action.blueprintString));
-      return blueprint;
+      return JSON.parse(decode(action.blueprintString)).blueprint;
+
     case types.PLACE_ENTITY:
-      let entityNumber = 0;
-      state.blueprint.entities.forEach( entity => {
-        entityNumber = entityNumber < entity.entity_number ? entity.entity_number : entityNumber;
-      })
-      entityNumber += 1;
-      const newEntity = {
+      const entityNumber = state.entities.reduce((acc, entity) => Math.max(acc, entity.entity_number), 0) + 1;
+      const { name, position: {x, y}, offset: {dX, dY}, direction } = action
+      const position = {
+        x: x - dX + (dX == Math.trunc(dX) ? 0 : 0.5),
+        y: y - dY + (dY == Math.trunc(dY) ? 0 : 0.5)
+      }
+      const info = entityInfo[action.name];
+      position.x = position.x + (info.width % 2 == 0 ? -0.5 : 0)
+      position.y = position.y + (info.height % 2 == 0 ? -0.5 : 0)
+
+      let newEntity = {
         entity_number: entityNumber,
-        name: action.newEntityName,
-        position: action.position
+        name: action.name,
+        position: position,
+        direction: 0,
       };
-      state.blueprint.entities.push(newEntity);
-      return { ...state };
+
+      if (rotatable.includes(info.type)) {
+        while (newEntity.direction != direction) {
+          newEntity = rotateEntity(newEntity)
+        }
+      }
+      const ents = [...state.entities, newEntity]
+      return { ...state, entities: ents };
+
+
 
     case types.MODIFY_ENTITY:
-      // let entities = state.blueprint.entities
-      let entity = action.entity
-      let entities = state.blueprint.entities.filter(e => {
-            return e != entity;
-          });
-
+      const entity = action.entity
+      const entities = state.entities.filter(e => e != entity);
       switch (action.mode) {
         case "remove":
-          // entities = state.blueprint.entities.filter(e => {
-          //   return e != entity;
-          // });
-          return { ...state, blueprint: {entities} };
-          // return { ...state };
+          return { ...state, entities };
         case "rotate":
-          // entities = state.blueprint.entities.filter(e => {
-          //   return e != entity;
-          // })
-          const info = entity_info[entity.name]
-          entity.direction = !!entity.direction ? (entity.direction + 2) % 8 : 2;
-          if (info.width != info.height && info.width%2==0 || info.height%2==0) {
-            if (entity.direction==2 || entity.direction==6) {
-              entity.position.x -= 0.5
-              entity.position.y += 0.5
-            } else if (entity.direction==0 || entity.direction==4) {
-              entity.position.x += 0.5
-              entity.position.y -= 0.5
-
-            }
+          if (!rotatable.includes(entityInfo[entity.name].type)) {
+            return state;
           }
-          // entity.position.x = (entity_meta.width%2==0 && entity.direction==2 || entity.direction==6) ? entity.position.x  : entity.position.x
-          entities.push(entity);
-          return { ...state, blueprint: {entities} };
-          // return { ...state };
+          const ents = [...entities, rotateEntity(action.entity)]
+          return { ...state, entities: ents };
         default:
           return state;
       }
     case types.BATCH_UPGRADE:
-      let upgradable = action.payload;
-      let upgrade = upgrades[upgradable];
-      let upgraded_entities = state.blueprint.entities.map(entity => {
-        entity.name = (entity.name==upgradable ? upgrade : entity.name);
+      const { upgradable } = action;
+      const upgradedEntities = state.entities.map(e => {
+        const entity = {...e}
+        entity.name = (entity.name == upgradable ? upgrades[upgradable] : entity.name);
         return entity;
       })
-      return { ...state, blueprint: {entities: upgraded_entities} };
-
+      return { ...state, entities: upgradedEntities };
 
     default:
       return state;
   }
 }
 
-
-
 const rootReducer = combineReducers({
-  blueprint,
+  blueprint: undoable(blueprint, {debug: true, filter: includeAction([
+    types.MODIFY_ENTITY,
+    types.PLACE_ENTITY,
+    types.BATCH_UPGRADE,
+    types.REMOVE_ENTITY
+    ])}),
+  // blueprint,
   mode,
-  // hovered,
   selected,
   cellSize,
-  newEntityName
+  newEntityName,
+  newEntityDirection
 })
 
 export default rootReducer

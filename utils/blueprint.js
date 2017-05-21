@@ -26,7 +26,7 @@ export const sizeToPositionOffset = (size) => {
 
 export const blueprintToGridSize = (blueprint) => {
      let [minX, maxX, minY, maxY] = [0, 0, 0, 0];
-    blueprint.blueprint.entities.forEach(function(entity) {
+    blueprint.entities.forEach(function(entity) {
       const pos = entity.position;
       [minX, maxX] = [pos.x < minX ? pos.x : minX, pos.x > maxX ? pos.x : maxX];
       [minY, maxY] = [pos.y < minY ? pos.y : minY, pos.y > maxY ? pos.y : maxY];

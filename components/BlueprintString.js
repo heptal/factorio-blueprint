@@ -1,42 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { encode } from '../utils/blueprint';
-import { processBlueprintString } from '../store/actions';
 
-
-const BlueprintString = (props) => {
-  const { blueprint, decodeBlueprint } = props
-  const blueprintString = blueprint.blueprint.entities.length > 0 ? encode(blueprint) : ""
-  // const blueprintString = ""
-  return (
-      <textarea id="blueprintstring"
-        type="text"
-        autoFocus="true"
-        onChange={e => props.decodeBlueprint(e.target.value)}
-        value={blueprintString}
-      />
-  );
-};
-
-const mapStateToProps = state => ({
-    blueprint: state.blueprint
-});
-
-const mapDispatchToProps = dispatch => ({
-    decodeBlueprint: blueprintString => {
-      dispatch(processBlueprintString(blueprintString))
-    }
-});
-
-const BlueprintStringContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(BlueprintString);
+const BlueprintString = ({ blueprint, decodeBlueprint }) => (
+  <textarea className="blueprintstring"
+    type="text"
+    spellCheck="false"
+    placeholder="Paste blueprint string here"
+    autoFocus="true"
+    onChange={e => decodeBlueprint(e.target.value)}
+    value={blueprint.entities.length > 0 ? encode({blueprint}) : ""}
+  />
+);
 
 BlueprintString.propTypes = {
-  blueprint: PropTypes.object,
+  blueprint: PropTypes.object.isRequired,
   decodeBlueprint: PropTypes.func.isRequired
-}
+};
 
-export default BlueprintStringContainer;
+export default BlueprintString;

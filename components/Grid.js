@@ -2,66 +2,54 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Entity from './Entity';
 import GridCell from './GridCell'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux';
-import * as actionCreators from '../store/actions';
-import {blueprintToGridSize} from '../utils/blueprint'
-
-
-
+import { blueprintToGridSize } from '../utils/blueprint'
 
 const Grid = (props) => {
-    const { blueprint, mode, cellSize, newEntityName, onEntityClick, onCellClick } = props;
-    // const size = 20;
+  const { blueprint, mode, cellSize, newEntityName, newEntityDirection, onEntityClick, onCellClick } = props;
 
-    // const modifyEntity = (entity, operation) => actions.modifyEntity({entity, operation});
-    // const placeEntity = (newEntityName, position) => actions.placeEntity(newEntityName, position);
-    // const selectEntity = (entity) => actions.selectEntity(entity);
+  const [cols, rows, dX, dY] = blueprintToGridSize(blueprint)
 
-    const [cols, rows, dX, dY] = blueprintToGridSize(blueprint)
+  const style = {
+    gridTemplateColumns: `repeat(${cols}, 1fr)`,
+    gridTemplateRows: `repeat(${rows}, 1fr)`,
+    width: `${cellSize*cols}px`,
+    height: `${cellSize*rows}px`,
+  };
 
-    const style = {
-      gridTemplateColumns: `repeat(${cols}, 1fr)`,
-      gridTemplateRows: `repeat(${rows}, 1fr)`,
-      width: `${cellSize*cols}px`,
-      height: `${cellSize*rows}px`,
-    };
-
-    return (
+  return (
+    <div className="grid-container">
       <div className={`grid`} style={style}>
-        {Array(cols).fill().map( (_, x) => (
-          Array(rows).fill().map( (_, y) => (
-            <GridCell
-              x={x + 1}
-              y={y + 1}
-              dX={dX}
-              dY={dY}
-              newEntityName={newEntityName}
-              onClick={onCellClick}
+          {Array(cols).fill().map( (_, x) => (
+            Array(rows).fill().map( (_, y) => (
+              <GridCell
+                gridPosition={{x: x + 1, y: y + 1}}
+                offset={{dX, dY}}
+                newEntityName={newEntityName}
+                newEntityDirection={newEntityDirection}
+                onClick={onCellClick}
+              />
+            ))
+          ))}
+          {blueprint.entities.map(entity => (
+            <Entity
+              key={entity.entity_number}
+              entity={entity}
+              offset={{dX, dY}}
+              mode={mode}
+              onClick={onEntityClick}
             />
-          ))
-        ))}
-        {blueprint.blueprint.entities.map(entity => (
-          <Entity
-            key={entity.entity_number}
-            entity={entity}
-            dX={dX}
-            dY={dY}
-            mode={mode}
-            onClick={onEntityClick}
-          />
-        ))}
+          ))}
+        </div>
       </div>
-    );
+  );
 }
-
-
 
 Grid.propTypes = {
   blueprint: PropTypes.object.isRequired,
   mode: PropTypes.string.isRequired,
   cellSize: PropTypes.number.isRequired,
   newEntityName: PropTypes.string.isRequired,
+  newEntityDirection: PropTypes.number.isRequired,
   onEntityClick: PropTypes.func.isRequired,
   onCellClick: PropTypes.func.isRequired,
 }

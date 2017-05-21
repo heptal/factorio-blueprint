@@ -1,91 +1,75 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { entity_info } from '../constants/entities';
-import { item_info } from '../constants/items';
+import { entityInfo, rotatable } from '../constants/entities';
+import { itemInfo } from '../constants/items';
+import { recipeInfo } from '../constants/recipes';
 import { sizeToPositionOffset } from '../utils/blueprint'
 
-const Module = (props) => {
-  const {module} = props
-  const module_meta = item_info.find(function(item) {
-      // if (module && module.item) {
-        // console.log(module.item)
-        return item.name == module.item;
-      // }
-
-    })
+const Modules = ({items}) => {
+  const modules = items.reduce( (acc, module) => acc.concat(Array(module.count).fill(module.item)), [] )
 
   return (
-    <div>
-      {Array(module.count).fill().map( _ => (
-        <div className="machine-module"><img src={module_meta.icon} /></div>
+    <div className="modules">
+      {modules.map( (name, i) => (
+        <div key={i} className="module-item"><img src={itemInfo[name].icon} /></div>
       ))}
     </div>
   )
 }
 
-const Recipe = (props) => {
-  const {recipe, items} = props
-
-  const item_meta = item_info.find(function(item) {
-      return item.name == recipe;
-    })
-
-    //   const styles = {
-    //   backgroundImage: `url("${item.icon}")`,
+const Arrow = ({item, direction}) => {
+    const flipped = item.type=="inserter"
+    const styles = {
+      transform: `rotate(${180 + 45 * (direction ? direction : 0) * (flipped ? -1 : 1)}deg)`
+    };
   return (
-    <div>
-    <div>{item_meta && item_meta.icon &&
-      <img src={item_meta.icon} />
-    }
-     </div>
-     <div>
-      {items && items.map(item => (
-       <Module key={item.item} module={item}/>
-      ))}
-     </div>
+    <div className="arrow" style={styles}>
+      <img src="/graphics/arrows/indication-arrow-up-to-down.png"/>
+  </div>
+  )
+}
+
+const Recipe = ({recipe}) => {
+  let info = itemInfo[recipe]
+  info = info ? info : recipeInfo[recipe]
+
+  return (
+    <div className="recipe">
+      <img src={info.icon} />
   </div>
   )
 }
 
 const Entity = (props) => {
-    const { entity, mode, dX, dY, onClick } = props;
+    const { entity, mode, offset, onClick } = props;
 
-    let entity_meta = entity_info[entity.name];
+    let entityMeta = entityInfo[entity.name];
 
-
-
-
-    // const sizeToPositionOffset = (size) => {
-    //   return -0.5 * (size - 1)
-    // }
-    // const positionTo
-
-    let [baseW, baseH] = [entity_meta.width, entity_meta.height]
+    let [baseW, baseH] = [entityMeta.width, entityMeta.height]
     if (entity.direction==2 || entity.direction==6) {
       [baseW, baseH] = [baseH, baseW]
     }
-    console.log(dX, dY)
 
-    let gridX = Math.floor(entity.position.x + dX + sizeToPositionOffset(baseW));
-    let gridY = Math.floor(entity.position.y + dY + sizeToPositionOffset(baseH));
+    let gridX = Math.floor(entity.position.x + offset.dX + sizeToPositionOffset(baseW));
+    let gridY = Math.floor(entity.position.y + offset.dY + sizeToPositionOffset(baseH));
 
     let gridW = baseW==1 ? 0 : baseW
     let gridH = baseH==1 ? 0 : baseH
+    let rotation = 0
 
+    let arrowsOn = rotatable.includes(entityMeta.type) ? true : false
+
+    if (entityMeta.type=="transport-belt") {
+      arrowsOn = false;
+      rotation = 45*(entity.direction ? entity.direction : 0)
+    }
 
     const styles = {
-      backgroundImage: `url("${entity_meta.icon}")`,
+      backgroundImage: `url("${entityMeta.icon}")`,
       gridColumn: `${gridX} / ${gridX + gridW}`,
       gridRow: `${gridY} / ${gridY + gridH}`,
+      transform: `rotate(${rotation}deg)`
     };
-    const arrowStyles = {
-      backgroundImage: `url("/graphics/arrows/indication-arrow-up-to-down.png")`,
-      // gridColumn: `${gridX} / ${gridX + gridW}`,
-      // gridRow: `${gridY} / ${gridY + gridH}`,
-      transform: `rotate(${180+45*(entity.direction ? entity.direction : 0)}deg)`
-    };
-
-    const arrow = "↑↗→↘↓↙←↖"[entity.direction ? entity.direction : 0]
 
     return (
         <div
@@ -93,11 +77,15 @@ const Entity = (props) => {
           style={styles}
           onClick={() => onClick(entity, mode)}
         >
-          <div className="recipe">
-          {entity_meta.type=="assembling-machine" &&
-          <Recipe recipe={entity.recipe} items={entity.items}/>
-          }</div>
-          <div className="arrow" style={arrowStyles}></div>{arrow}
+          {entity.recipe &&
+            <Recipe recipe={entity.recipe} />
+          }
+          {entity.items &&
+            <Modules items={entity.items} />
+          }
+          {arrowsOn &&
+            <Arrow item={entityMeta} direction={entity.direction}/>
+          }
         </div>
     );
 }
@@ -105,8 +93,7 @@ const Entity = (props) => {
 Entity.propTypes = {
     entity: PropTypes.object.isRequired,
     mode: PropTypes.string.isRequired,
-    dX: PropTypes.number.isRequired,
-    dY: PropTypes.number.isRequired,
+    offset: PropTypes.object.isRequired,
     onClick: PropTypes.func.isRequired,
 }
 

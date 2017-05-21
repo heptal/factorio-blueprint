@@ -5,7 +5,8 @@ const styles = {
     width: "800px",
     height: "200px",
     overflow: "scroll",
-    fontFamily: "monospace"
+    fontFamily: "monospace",
+    background: "white"
 }
 const JSONView = ({blueprint}) => {
     return (
