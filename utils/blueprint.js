@@ -14,12 +14,6 @@ export const encode = function(obj) {
   return '0' + btoa(pako.deflate(JSON.stringify(obj), { to: 'string' }))
 }
 
-export const blueprintToGridPosition = (x, y) => {
-  let gridX = Math.round(x + offset.x + 3 + sizeToPositionOffset(entity_meta.width));
-  let gridY = Math.round(y + offset.y + 3 + sizeToPositionOffset(entity_meta.height));
-
-}
-
 export const sizeToPositionOffset = (size) => {
       return -0.5 * (size - 1)
 }

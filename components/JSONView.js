@@ -1,23 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const styles = {
-    width: "800px",
-    height: "200px",
-    overflow: "scroll",
-    fontFamily: "monospace",
-    background: "white"
-}
-const JSONView = ({blueprint}) => {
-    return (
-        <div style={styles}>
-            {JSON.stringify(blueprint)}
-        </div>
-    )
-}
+const JSONView = ({ blueprint }) => (
+  <div className="json-view">{JSON.stringify(blueprint)}</div>
+);
 
 JSONView.propTypes = {
-  blueprint: PropTypes.object,
-}
+  blueprint: PropTypes.object.isRequired,
+};
 
 export default JSONView;

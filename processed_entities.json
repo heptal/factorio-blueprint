@@ -1,0 +1,404 @@
+[
+  {
+    "width": 1,
+    "icon": "/graphics/icons/underground-belt.png",
+    "name": "underground-belt",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/fast-underground-belt.png",
+    "name": "fast-underground-belt",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/express-underground-belt.png",
+    "name": "express-underground-belt",
+    "height": 1
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/splitter.png",
+    "name": "splitter",
+    "height": 1
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/fast-splitter.png",
+    "name": "fast-splitter",
+    "height": 1
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/express-splitter.png",
+    "name": "express-splitter",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/fast-transport-belt.png",
+    "name": "fast-transport-belt",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/express-transport-belt.png",
+    "name": "express-transport-belt",
+    "height": 1
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/assembling-machine-2.png",
+    "name": "assembling-machine-2",
+    "height": 3
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/assembling-machine-3.png",
+    "name": "assembling-machine-3",
+    "height": 3
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/iron-chest.png",
+    "name": "iron-chest",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/steel-chest.png",
+    "name": "steel-chest",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/long-handed-inserter.png",
+    "name": "long-handed-inserter",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/fast-inserter.png",
+    "name": "fast-inserter",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/stack-inserter.png",
+    "name": "stack-inserter",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/stack-filter-inserter.png",
+    "name": "stack-filter-inserter",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/filter-inserter.png",
+    "name": "filter-inserter",
+    "height": 1
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/solar-panel.png",
+    "name": "solar-panel",
+    "height": 3
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/gate.png",
+    "name": "gate",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/rail.png",
+    "name": "straight-rail",
+    "height": 2
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/curved-rail.png",
+    "name": "curved-rail",
+    "height": 2
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/train-stop.png",
+    "name": "train-stop",
+    "height": 2
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/rail-signal.png",
+    "name": "rail-signal",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/rail-chain-signal.png",
+    "name": "rail-chain-signal",
+    "height": 1
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/lab.png",
+    "name": "lab",
+    "height": 3
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/logistic-chest-passive-provider.png",
+    "name": "logistic-chest-passive-provider",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/logistic-chest-active-provider.png",
+    "name": "logistic-chest-active-provider",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/logistic-chest-storage.png",
+    "name": "logistic-chest-storage",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/logistic-chest-requester.png",
+    "name": "logistic-chest-requester",
+    "height": 1
+  },
+  {
+    "width": 9,
+    "icon": "/graphics/icons/rocket-silo.png",
+    "name": "rocket-silo",
+    "height": 10
+  },
+  {
+    "width": 4,
+    "icon": "/graphics/icons/roboport.png",
+    "name": "roboport",
+    "height": 4
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/storage-tank.png",
+    "name": "storage-tank",
+    "height": 3
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/pump.png",
+    "name": "pump",
+    "height": 2
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/big-electric-pole.png",
+    "name": "big-electric-pole",
+    "height": 2
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/medium-electric-pole.png",
+    "name": "medium-electric-pole",
+    "height": 1
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/substation.png",
+    "name": "substation",
+    "height": 2
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/accumulator.png",
+    "name": "accumulator",
+    "height": 2
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/steel-furnace.png",
+    "name": "steel-furnace",
+    "height": 2
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/electric-furnace.png",
+    "name": "electric-furnace",
+    "height": 3
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/beacon.png",
+    "name": "beacon",
+    "height": 3
+  },
+  {
+    "width": 5,
+    "icon": "/graphics/icons/oil-refinery.png",
+    "name": "oil-refinery",
+    "height": 5
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/chemical-plant.png",
+    "name": "chemical-plant",
+    "height": 3
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/arithmetic-combinator.png",
+    "name": "arithmetic-combinator",
+    "height": 2
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/decider-combinator.png",
+    "name": "decider-combinator",
+    "height": 2
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/constant-combinator.png",
+    "name": "constant-combinator",
+    "height": 1
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/power-switch.png",
+    "name": "power-switch",
+    "height": 2
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/programmable-speaker.png",
+    "name": "programmable-speaker",
+    "height": 1
+  },
+  {
+    "width": 5,
+    "icon": "/graphics/icons/nuclear-reactor.png",
+    "name": "nuclear-reactor",
+    "height": 5
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/centrifuge.png",
+    "name": "centrifuge",
+    "height": 3
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/heat-boiler.png",
+    "name": "heat-exchanger",
+    "height": 2
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/steam-turbine.png",
+    "name": "steam-turbine",
+    "height": 5
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/heat-pipe.png",
+    "name": "heat-pipe",
+    "height": 1
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/stone-furnace.png",
+    "name": "stone-furnace",
+    "height": 2
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/transport-belt.png",
+    "name": "transport-belt",
+    "height": 1
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/boiler.png",
+    "name": "boiler",
+    "height": 2
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/wooden-chest.png",
+    "name": "wooden-chest",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/small-electric-pole.png",
+    "name": "small-electric-pole",
+    "height": 1
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/steam-engine.png",
+    "name": "steam-engine",
+    "height": 5
+  },
+  {
+    "width": 2,
+    "icon": "/graphics/icons/offshore-pump.png",
+    "name": "offshore-pump",
+    "height": 2
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/inserter.png",
+    "name": "inserter",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/burner-inserter.png",
+    "name": "burner-inserter",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/pipe.png",
+    "name": "pipe",
+    "height": 1
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/radar.png",
+    "name": "radar",
+    "height": 3
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/small-lamp.png",
+    "name": "small-lamp",
+    "height": 1
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/pipe-to-ground.png",
+    "name": "pipe-to-ground",
+    "height": 1
+  },
+  {
+    "width": 3,
+    "icon": "/graphics/icons/assembling-machine-1.png",
+    "name": "assembling-machine-1",
+    "height": 3
+  },
+  {
+    "width": 1,
+    "icon": "/graphics/icons/stone-wall.png",
+    "name": "stone-wall",
+    "height": 1
+  }
+]

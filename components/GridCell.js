@@ -1,26 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const GridCell = (props) => {
-  const { gridPosition, offset, newEntityName, newEntityDirection, onClick } = props;
-
-  const cellStyle = {
+const GridCell = ({ cellSize, gridPosition, offset, newEntityName, newEntityDirection, onClick }) => {
+  const style = {
+    // width: `${cellSize}px`,
+    // height: `${cellSize}px`,
     gridColumn: `${gridPosition.x}`,
     gridRow: `${gridPosition.y}`,
   };
-  // console.log(newEntityName, newEntityDirection)
 
   return (
-    <div className="grid-cell" style={cellStyle} onClick={e => onClick(newEntityName, gridPosition, offset, newEntityDirection)}></div>
-  )
-}
+    <div
+      className="grid-cell"
+      style={style}
+      onClick={e => onClick(newEntityName, gridPosition, offset, newEntityDirection)}
+    />
+  );
+};
 
 GridCell.propTypes = {
-  gridPosition: PropTypes.object.isRequired,
-  offset: PropTypes.object.isRequired,
+  cellSize: PropTypes.number.isRequired,
+  gridPosition: PropTypes.shape({
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired,
+  }).isRequired,
+  offset: PropTypes.shape({
+    dX: PropTypes.number.isRequired,
+    dY: PropTypes.number.isRequired,
+  }).isRequired,
   newEntityName: PropTypes.string.isRequired,
   newEntityDirection: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
-}
+};
 
-export default GridCell
+export default GridCell;

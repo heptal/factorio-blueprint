@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux'
 import undoable, { includeAction } from 'redux-undo'
 import * as types from '../actions/types'
-import {decode, encode} from '../../utils/blueprint'
-
+import { decode } from '../../utils/blueprint'
 import {upgrades} from '../../constants/entities'
 import { entityInfo, rotatable } from '../../constants/entities';
 
@@ -78,7 +77,7 @@ const selected = (state = initialState.selected, action) => {
 }
 
 const rotateEntity = (e) => {
-  const entity = {...e}
+  const entity = Object.assign({}, e)
   const info = entityInfo[entity.name]
   entity.direction = !!entity.direction ? (entity.direction + 2) % 8 : 2;
   if (info.width != info.height && info.width % 2 == 0 || info.height % 2 == 0) {
@@ -108,7 +107,7 @@ const blueprint = (state = initialState.blueprint, action) => {
         x: x - dX + (dX == Math.trunc(dX) ? 0 : 0.5),
         y: y - dY + (dY == Math.trunc(dY) ? 0 : 0.5)
       }
-      const info = entityInfo[action.name];
+      const info = entityInfo[name];
       position.x = position.x + (info.width % 2 == 0 ? -0.5 : 0)
       position.y = position.y + (info.height % 2 == 0 ? -0.5 : 0)
 
@@ -124,8 +123,7 @@ const blueprint = (state = initialState.blueprint, action) => {
           newEntity = rotateEntity(newEntity)
         }
       }
-      const ents = [...state.entities, newEntity]
-      return { ...state, entities: ents };
+      return Object.assign({}, state, {entities: [...state.entities, newEntity]});
 
 
 
@@ -134,24 +132,23 @@ const blueprint = (state = initialState.blueprint, action) => {
       const entities = state.entities.filter(e => e != entity);
       switch (action.mode) {
         case "remove":
-          return { ...state, entities };
+          return Object.assign({}, state, {entities});
         case "rotate":
           if (!rotatable.includes(entityInfo[entity.name].type)) {
             return state;
           }
-          const ents = [...entities, rotateEntity(action.entity)]
-          return { ...state, entities: ents };
+          return Object.assign({}, state, {entities: [...entities, rotateEntity(action.entity)]});
         default:
           return state;
       }
     case types.BATCH_UPGRADE:
       const { upgradable } = action;
-      const upgradedEntities = state.entities.map(e => {
-        const entity = {...e}
+      const ents = state.entities.map(e => {
+        const entity = Object.assign({}, e);
         entity.name = (entity.name == upgradable ? upgrades[upgradable] : entity.name);
         return entity;
       })
-      return { ...state, entities: upgradedEntities };
+      return Object.assign({}, state, {entities: ents});
 
     default:
       return state;
@@ -165,7 +162,6 @@ const rootReducer = combineReducers({
     types.BATCH_UPGRADE,
     types.REMOVE_ENTITY
     ])}),
-  // blueprint,
   mode,
   selected,
   cellSize,
